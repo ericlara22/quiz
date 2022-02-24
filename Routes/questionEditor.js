@@ -15,10 +15,8 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const question = new Question({
     question: req.body.question,
-    alt1: req.body.alt1,
-    alt2: req.body.alt2,
-    alt3: req.body.alt3,
-    alt4: req.body.alt4,
+    alternatives: req.body.alternatives,
+    correct: req.body.correct,
   });
 
   try {

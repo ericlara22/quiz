@@ -12,8 +12,10 @@ app.listen(port);
 //ROUTES
 
 const questionEditor = require("./Routes/questionEditor");
+const showQuestions = require("./Routes/showQuestions");
 
 app.use("/qedit", questionEditor);
+app.use("/showquestions", showQuestions);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
